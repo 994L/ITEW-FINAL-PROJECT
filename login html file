@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="../Login/loginStyle.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body class="login-background">
+    <header>
+        <a href="../Home/homePage.html" class="logo">Cabuyao Travel & Tours</a>
+        <nav class="navigation">
+            <button class="btnHome" onclick="document.location='../Home/homePage.html'">Home</button>
+        </nav>
+    </header>
+    <div class="wrapper">
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form id="loginForm"> <!-- Added id="loginForm" here -->
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                    <input type="email" id="Email_1" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                    <input type="password" id="Password_1" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox"> Remember me</label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <button type="button" class="btn" id="loginButton">Login</button> <!-- Changed type="submit" to type="button" and added id="loginButton" -->
+                <div class="login-register">
+                    <p>Don't have an account? <a href="../Registration/register.html" class="register-link">Register</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="../Login/loginScript.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
