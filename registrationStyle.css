@@ -1,38 +1,200 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('registerForm');
-    const registerBtn = document.getElementById('registerBtn');
+/* General resets and global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
 
-    form.addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent the form from submitting
+body {
+    background-image: url(../image/Pamantasan_ng_Cabuyao.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
 
-        // Perform form validation if needed
-        let isValid = validateForm(); // Assume validateForm is a function that returns true if validation passes
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 5%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+}
 
-        if (isValid) {
-            // Show alert
-            alert('Successfully registered');
+.logo {
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+}
 
-            // Redirect to login page
-            window.location.href = '../Login/login.html';
-        } else {
-            // Handle validation errors or other logic
-            alert('Please fill out all required fields and agree to terms');
-        }
-    });
+.navigation .btnHome {
+    background-color: transparent;
+    border: 3px solid white;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 20px;
+    transition: .5s;
+}
 
-    function validateForm() {
-        // Example validation logic (you can expand this as needed)
-        const fullname = document.getElementById('Fullname').value.trim();
-        const birthday = document.getElementById('Birthday').value.trim();
-        const address = document.getElementById('Address').value.trim();
-        const email = document.getElementById('Email').value.trim();
-        const password = document.getElementById('Password').value.trim();
-        const termsAgreed = document.getElementById('termsCheckbox').checked;
+.navigation .btnHome:hover {
+    background: rgb(255, 255, 255);
+    color: #7ABA78;
+}
 
-        if (fullname === '' || birthday === '' || address === '' || email === '' || password === '' || !termsAgreed) {
-            return false; // Form is not valid
-        }
+.wrapper {
+    position: relative;
+    width: 500px;
+    height: 600px;
+    background: #ffffff91;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: transform 0.5s ease, height 0.2s ease;
+}
 
-        return true; // Form is valid
-    }
-});
+.form-box.register {
+    transition: none;
+    transform: translateX(0);
+    padding-top: 0.5em;
+}
+
+.form-box h2 {
+    font-size: 2em;
+    color: #162938;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    margin: 30px 0;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #162938;
+    font-weight: 500;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+    top: -5px;
+}
+
+.input-box input {
+    width: calc(100% - 40px);
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #162938;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2em;
+    color: #162938;
+}
+
+.remember-forgot {
+    font-size: 0.8em;
+    color: #162938;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.remember-forgot label input {
+    accent-color: #162938;
+    margin-right: 3px;
+}
+
+.remember-forgot a {
+    color: #162938;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.remember-forgot a:hover {
+    color: seagreen;
+    text-decoration: underline;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background: transparent;
+    border: 3px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.5s;
+    color: white;
+    font-size: 1em;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: white;
+    color: seagreen;
+}
+
+.login-register {
+    font-size: 0.9em;
+    color: #162938;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.login-register p a {
+    color: #162938;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.login-register a:hover {
+    color: seagreen;
+    text-decoration: underline;
+}
+
+.login-background {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
