@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+    <link rel="stylesheet" href="../Registration/registerStyle.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body class="login-background">
+    <header>
+        <a href="../Home/homePage.html" class="logo">Cabuyao Travel & Tours</a>
+        <nav class="navigation">
+            <button class="btnHome" onclick="document.location='../Home/homePage.html'">Home</button>
+        </nav>
+    </header>
+    <div class="wrapper">
+        <div class="form-box register">
+            <h2>Register</h2>
+            <form id="registerForm">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                    <input type="text" id="Fullname" required>
+                    <label>Full Name</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="calendar-outline"></ion-icon></span>
+                    <input type="text" id="Birthday" required>
+                    <label>Birthday</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                    <input type="text" id="Address" required>
+                    <label>Address</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                    <input type="email" id="Email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                    <input type="password" id="Password" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox" id="termsCheckbox" required> I agree to the terms & conditions</label>
+                </div>
+                <button type="submit" class="btn" id="registerBtn">Register</button>
+                <div class="login-register">
+                    <p>Already have an account? <a href="../Login/login.html" class="login-link">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="../Registration/registerScript.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
